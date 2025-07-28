@@ -1,65 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fragmentos Musicales - Reina Luisa</title>
+  <meta charset="UTF-8">
+  <title>The Playlist - Fragmentos Musicales</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f6f6f6;
-      color: #333;
+      background: #f4f4f4;
       text-align: center;
-      padding: 50px 20px;
+      padding: 50px;
     }
 
     h1 {
-      color: #222;
-      margin-bottom: 30px;
+      color: #333;
     }
 
-    .track {
+    .artistas {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .link-artista {
       background: #fff;
+      padding: 20px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      padding: 30px;
-      max-width: 500px;
+      text-decoration: none;
+      color: #1e1e1e;
+      font-size: 1.2rem;
+      transition: all 0.2s;
+      max-width: 400px;
       margin: 0 auto;
     }
 
-    h2 {
-      font-size: 1.4rem;
-      color: #555;
-      margin-bottom: 15px;
-    }
-
-    audio {
-      width: 100%;
-      outline: none;
-    }
-
-    footer {
-      margin-top: 50px;
-      font-size: 0.85rem;
-      color: #888;
+    .link-artista:hover {
+      background-color: #d9ecff;
+      color: #0a58ca;
     }
   </style>
 </head>
 <body>
-
   <h1>Fragmentos Musicales de la Décima Región</h1>
-
-  <div class="track">
-    <h2>Reina Luisa - Tema: Al borde del final</h2>
-    <audio controls>
-      <source src="Reina_Luisa_Al_borde_del_final_1_min.mp3" type="audio/mpeg" />
-      Tu navegador no soporta el elemento de audio.
-    </audio>
+  <div class="artistas">
+    <a class="link-artista" href="reina_luisa.html">🎵 Reina Luisa - “Al borde del final”</a>
+    <!-- Puedes duplicar esta línea y cambiar nombre_artista.html por otros enlaces -->
+    <a class="link-artista" href="nombre_otro_artista.html">🎵 Otro artista - “Título del tema”</a>
   </div>
-
-  <footer>
-    Solo para fines de prueba interna - Proyecto de juego de mesa "The Playlist"
-  </footer>
-
 </body>
 </html>
