@@ -4,48 +4,156 @@
 <head>
     <meta charset="UTF-8">
     <title>The Playlist - Acceso de prueba</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: #e6ecf0;
-            padding: 50px;
-            text-align: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background: linear-gradient(135deg, #0fffc1 0%, #7e0fff 100%);
+            font-family: 'Montserrat', Arial, sans-serif;
         }
         h1 {
-            color: #333;
+            font-family: 'Orbitron', Arial, sans-serif;
+            font-size: 3.2rem;
+            margin-top: 60px;
+            margin-bottom: 40px;
+            color: #fff;
+            letter-spacing: 2px;
+            text-shadow: 0 0 12px #0fffc1, 0 0 24px #7e0fff;
         }
-        ul {
-            list-style: none;
-            padding: 0;
+        .playlist {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+            max-width: 1100px;
+            margin-bottom: 60px;
         }
-        li {
-            margin: 15px 0;
+        .card {
+            background: linear-gradient(135deg, #ff00cc 0%, #333399 100%);
+            border-radius: 24px;
+            box-shadow: 0 6px 32px 0 rgba(0,0,0,0.25), 0 0 24px #0fffc1 inset;
+            padding: 32px 28px 24px 28px;
+            min-width: 260px;
+            max-width: 320px;
+            color: #fff;
+            position: relative;
+            transition: transform 0.18s cubic-bezier(.4,2,.6,1), box-shadow 0.18s;
+            cursor: pointer;
+            overflow: hidden;
         }
-        a {
+        .card:hover {
+            transform: scale(1.06) rotate(-2deg);
+            box-shadow: 0 12px 48px 0 #0fffc1, 0 0 32px #ff00cc inset;
+        }
+        .song-title {
+            font-size: 1.35rem;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            margin-bottom: 18px;
+            text-shadow: 0 0 8px #fff, 0 0 16px #0fffc1;
+        }
+        .play-icon {
+            font-size: 2.5rem;
+            color: #0fffc1;
+            background: #fff2;
+            border-radius: 50%;
+            padding: 18px 22px;
+            margin-bottom: 18px;
+            box-shadow: 0 0 16px #0fffc1, 0 0 8px #fff inset;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        }
+        .card:hover .play-icon {
+            color: #ff00cc;
+            background: #0fffc1;
+            box-shadow: 0 0 32px #ff00cc, 0 0 16px #fff inset;
+        }
+        .card a {
+            display: block;
+            color: #fff;
             text-decoration: none;
-            color: #007acc;
-            font-size: 18px;
+            font-size: 1.1rem;
+            margin-top: 10px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: color 0.2s;
         }
-        a:hover {
+        .card a:hover {
+            color: #0fffc1;
             text-decoration: underline;
+        }
+        @media (max-width: 900px) {
+            .playlist {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>🎧 The Playlist: Acceso de prueba</h1>
-    <ul>
-        <li><a href="bin_y_daggy_1_min.html" target="_blank">Bin y Daggy - "Amigos X 100 pre"</a></li>
-<li><a href="decimo_triste_feliz_1_min.html" target="_blank">Décimo - "Tristefeliz"</a></li>
-<li><a href="fusion_andina_lonken_1_min.html" target="_blank">Fusión Andina - "Lonquen"</a></li>
-<li><a href="hijo_de_vecino_1_min.html" target="_blank">Hijo de vecino - "Culpa"</a></li>
-<li><a href="la_concuerda_latiendo_america_1_min.html" target="_blank">La Concuerda - "Latiendoamerica"</a></li>
-<li><a href="mkatana_1_min.html" target="_blank">M-Katana - "316"</a></li>
-<li><a href="nati_cartes_un_pedazo_de_mi_cielo_1_min.html" target="_blank">Nati Cartes - "Un pedazo de mi cielo"</a></li>
-<li><a href="pajaros_kiltros_fiu_fiu_1_min.html" target="_blank">Pájaros Kiltros - "Fiu Fiu"</a></li>
-<li><a href="reina_luisa_al_borde_del_final_1_min.html" target="_blank">Reina Luisa - "Al borde del final"</a></li>
-<li><a href="trippzy_una_buya_1_min.html" target="_blank">Trippzy - "Una Buya"</a></li>
-<li><a href="wechemapu_papas_con_merken_1_min.html" target="_blank">Wechemapu - "Papas con merkén"</a></li>
-
-    </ul>
+    <h1><i class="fa-solid fa-headphones" style="color:#0fffc1;"></i> The Playlist</h1>
+    <div class="playlist">
+        <div class="card">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+            <div class="song-title">Bin y Daggy - "Amigos X 100 pre"</div>
+            <a href="bin_y_daggy_1_min.html" target="_blank">Escuchar</a>
+        </div>
+        <div class="card">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+            <div class="song-title">Décimo - "Tristefeliz"</div>
+            <a href="decimo_triste_feliz_1_min.html" target="_blank">Escuchar</a>
+        </div>
+        <div class="card">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+            <div class="song-title">Fusión Andina - "Lonquen"</div>
+            <a href="fusion_andina_lonken_1_min.html" target="_blank">Escuchar</a>
+        </div>
+        <div class="card">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+            <div class="song-title">Hijo de vecino - "Culpa"</div>
+            <a href="hijo_de_vecino_1_min.html" target="_blank">Escuchar</a>
+        </div>
+        <div class="card">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+            <div class="song-title">La Concuerda - "Latiendoamerica"</div>
+            <a href="la_concuerda_latiendo_america_1_min.html" target="_blank">Escuchar</a>
+        </div>
+        <div class="card">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+            <div class="song-title">M-Katana - "316"</div>
+            <a href="mkatana_1_min.html" target="_blank">Escuchar</a>
+        </div>
+        <div class="card">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+            <div class="song-title">Nati Cartes - "Un pedazo de mi cielo"</div>
+            <a href="nati_cartes_un_pedazo_de_mi_cielo_1_min.html" target="_blank">Escuchar</a>
+        </div>
+        <div class="card">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+            <div class="song-title">Pájaros Kiltros - "Fiu Fiu"</div>
+            <a href="pajaros_kiltros_fiu_fiu_1_min.html" target="_blank">Escuchar</a>
+        </div>
+        <div class="card">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+            <div class="song-title">Reina Luisa - "Al borde del final"</div>
+            <a href="reina_luisa_al_borde_del_final_1_min.html" target="_blank">Escuchar</a>
+        </div>
+        <div class="card">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+            <div class="song-title">Trippzy - "Una Buya"</div>
+            <a href="trippzy_una_buya_1_min.html" target="_blank">Escuchar</a>
+        </div>
+        <div class="card">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+            <div class="song-title">Wechemapu - "Papas con merkén"</div>
+            <a href="wechemapu_papas_con_merken_1_min.html" target="_blank">Escuchar</a>
+        </div>
+    </div>
 </body>
 </html>
